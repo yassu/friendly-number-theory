@@ -1,6 +1,6 @@
-#[cfg(test)]
-mod tests {
-    #[test]
-    fn it_works() {
+pub mod ex {
+    pub mod ex1 {
+        pub mod  ex1_1 {
+        }
     }
 }
