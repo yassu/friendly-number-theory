@@ -1,3 +1,13 @@
+/// 非負整数nに対して,
+/// nが平方数ならば自然数Option(sqrt(n))を出力する.
+/// nが平方数でないならばNoneを出力する.
+///
+/// # Examples
+///
+/// ```
+/// assert_eq!(Some(4), get_square_elemenet(4));
+/// assert_eq!(None, get_square_elemenet(5));
+/// ```
 fn get_square_elemenet(n: i64) -> Option<i64> {
     if n == 0 || n == 1 {
         return Some(n);
