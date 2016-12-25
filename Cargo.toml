@@ -1,0 +1,6 @@
+[package]
+name = "friendly_number_theory"
+version = "0.1.0"
+authors = ["yassu <mathyassu@gmail.com>"]
+
+[dependencies]
