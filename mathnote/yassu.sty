@@ -1,0 +1,68 @@
+%%% This is original sty file with useful settings.
+
+% packages
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{ascmac}
+
+% useful commands
+\newcommand{\defarrow}{\stackrel{\mathrm{def}}{\Longleftrightarrow}}
+
+% envorionment
+\newenvironment{teacher_talk}[1][]
+    {\begin{itembox}[l]{Talk with Teacher}}
+    {\end{itembox}}
+
+% simple omissions
+\newcommand{\quotes}[1]{``#1''}
+
+\newcommand{\then}{\Longrightarrow}
+\newcommand{\same}{\Longleftrightarrow}
+\newcommand{\st}{ \ \mathrm{s.t.} \ }
+\newcommand{\zero}{\mathbf{0}}
+\newcommand{\norm}[1]{\| #1 \|}
+\newcommand{\del}{\partial}
+\newcommand{\set}[1]{\{ #1 \}}
+
+% sets
+\newcommand{\NN}{\mathbf{N}}
+\newcommand{\ZZ}{\mathbf{Z}}
+\newcommand{\QQ}{\mathbf{Q}}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\CC}{\mathbf{C}}
+
+% Declare Math Operators
+\DeclareMathOperator{\corank}{corank}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\cod}{cod}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\const}{const}
+\DeclareMathOperator{\Aut}{Aut}
+
+% to my pretty math symbols
+\renewcommand{\Re}{\mathrm{Re}}
+\renewcommand{\Im}{\mathrm{Im}}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+
+% Theorem environments
+\newcommand{\theoname}{Theorem}
+\newtheorem{thm}{\theoname}
+\newcommand{\propname}{Proposition}
+\newtheorem{prop}{\propname}
+\newcommand{\corname}{Colorally}
+\newtheorem{Cor}{Colorally}
+\newcommand{\lemname}{Lemma}
+\newtheorem{Lem}{\lemname}
+\newtheorem{Example}{Example}
+\newtheorem{note}{Note}
+\newtheorem{Sym}{Symbol}
+\newtheorem{Def}{Deffinition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{Fact}{Fact}
+
+%% to my pretty format
+\renewcommand{\thefootnote}{\arabic{footnote})}
