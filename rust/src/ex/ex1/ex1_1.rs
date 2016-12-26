@@ -22,7 +22,7 @@ fn get_square_elemenet(n: i64) -> Option<i64> {
 }
 
 
-pub fn run() {
+pub fn main() {
     let max_n = 1000;
     let mut tri = 0;
     for j in 1..max_n {
