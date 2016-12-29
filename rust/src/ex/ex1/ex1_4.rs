@@ -60,7 +60,7 @@ fn is_prime(n: i32) -> bool {
 fn get_primes_on_series<F>(an: F, start: i32, end: i32) -> Vec<(i32, i32)>
     where F: Fn(i32) -> i32{
     let mut vec: Vec<(i32, i32)> = Vec::new();
-    for j in start..end {
+    for j in start..(end + 1) {
         let aj = an(j);
         if is_prime(aj) {
             vec.push((aj, j));
