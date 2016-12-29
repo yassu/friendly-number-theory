@@ -71,3 +71,16 @@ def submit(basename=MAIN_BASENAME, make=True, tag=None, author=AUTHOR):
 @task(alias='compile')
 def hand(basename=MAIN_BASENAME, make=True, tag=None, author=AUTHOR):
     submit(basename, make, tag, author)
+
+def get_cleaned_filenames(base_filename):
+    yield 'fabfile.pyc'
+    yield 'x.log'
+    for filename in (base_filename + ext for ext in
+            ('.aux', '.dvi', '.log', '.pdf')):
+        yield filename
+
+@task
+def clean(basename=MAIN_BASENAME):
+    for filename in get_cleaned_filenames(MAIN_BASENAME):
+        if os.path.isfile(filename):
+            os.remove(filename)
