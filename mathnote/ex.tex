@@ -1,7 +1,6 @@
 \documentclass{jarticle}
 \newcommand{\ccheckmark}{\checkmark \checkmark}
 \newcommand{\cnt}[1]{\noindent \underline{\textbf{#1}}}
-\usepackage{enumitem}
 \usepackage{longtable}
 \usepackage{enumerate}
 \usepackage{listing, jlisting}
@@ -620,6 +619,155 @@ y
 TODO
 % }}}
 
+% }}}
+
+\section{第4章の回答例} % {{{
+
+\cnt{4.1} % {{{
+略
+% }}}
+
+\cnt{4.2} \indent % {{{
+\noindent (a) $a = xz, b = yz, c = z^2$ とおくと % {{{
+\begin{align*}
+  x^3 z^3 + y^3 z^3 = z^4 \\
+  x^3 + y^3 = z.
+\end{align*}
+したがって, 例えば
+\begin{itemize}
+\item $x = 1, y = 2$ のとき $z = 1^3 + 2^3 = 9$ で
+\[
+  a = 1 \cdot 9 = 9, \quad
+  b = 2 \cdot 9 = 18, \quad
+  c = 9^2 = 81.
+\]
+\item $x = 2, y = 3$ のとき $z = 2^3 + 3^3 = 35$ で
+\[
+  a = 2 \cdot 35 = 70, \quad
+  b = 3 \cdot 35 = 105, \quad
+  c = 35^2.
+\]
+\end{itemize}
+% }}}
+
+\noindent (b) % {{{
+仮定より
+\[
+  A^3 + B^3 = C^2.
+\]
+このとき
+\begin{align*}
+(n^2A)^3 + (n^2B)^3
+  &= n^6(A^3 + B^3) \\
+  &= n^6 C^2 \\
+  &= (n^3C)^2.
+\end{align*}
+% }}}
+
+\noindent (c) % {{{
+
+(a)の$x, z$が平方因子を持たず かつ互いに素であれば $a = xz$ に平方因子は現れないから
+$(a, b, c)$ は $(b)$の意味の既約である.
+
+以下のステップで解を見つける:
+
+\begin{enumerate}[(i)]
+\item $x = 1, y$を適当な平方因子を持たない自然数として $z = x^3 + y^3$ を計算する.
+\item $z$ が平方因子を持たなければ $(a, b, c) = (xz, yz, z^2)$ は 既約である
+  \footnote{xzに平方因子が現れないため}.
+\end{enumerate}
+
+$x=1, y=2$ のとき) $z = 1^3 = 9^3 = 9 = 3^2$. これは平方因子を持つ.
+
+$x=1, y=3$ のとき) $z = 1^3 + 3^3 = 28 = 2^2 \cdot 7$. これは平方因子を持つ.
+
+$x=1, y=4$ のとき) $z = 1^3 + 4^3 = 65 = 5 \times 13$. これは平方因子を持たない.
+
+$x=1, y=5$ のとき) $z = 1^3 + 5^3 = 126 = 2 \times 63 = 2 \times 7 \times 3^2$.
+  これは平方因子を持つ.
+
+$x=1, y=6$のとき) $z = 1^3 + 6^3 = 217 = 7 \times 31$. これは平方因子を持たない.
+
+$x=1, y=7$のとき)
+\begin{align*}
+z
+  &= 1^3 + 7^3 \\
+  &= 344 \\
+  &= 2^2 \times 86.
+\end{align*}
+これは平方因子を持つ.
+
+$x = 1, y=8$のとき)
+\begin{align*}
+z
+  &= 1^3 + 8^3 \\
+  &= 513 \\
+  &= 3^2 \times 57.
+\end{align*}
+これは平方因子を持つ.
+
+$x = 1, y = 9$ のとき $z = 1^3 + 9^3 = 730 = 2 \times 3 \times 73$. これは平方因子を持たない.
+
+以上によって,
+\begin{align*}
+(a, b, c)
+  &= (2, 2, 4), (65, 4 \times 65, 65^2), \\
+  & \quad (7 \times 31, 6 \times 7 \times 31, 7^2 \times 31^2),
+      (2 \times 3 \times 73, 2 \times 3^3 \times 73, 2^2 \times 3^2 \times 73^2)
+\end{align*}
+は既約な $(\ast)$ の解である.
+% }}}
+
+\noindent (d) % {{{
+式 $(\ast)$ で$a = b$とした方程式
+\[
+  2a^3 = c^2
+\]
+を考える.
+左辺は偶数だから, $c$ も偶数. よって 自然数 $c_1$ があって $c = 2c_1$ と書ける.
+このとき
+\begin{align*}
+2a^3 &= (2c_1)^2 \\
+2a^3 &= 4c_1^2 \\
+a^3 &= 2c_1^2.
+\end{align*}
+同様に $a$は偶数なので, 自然数 $a_1$ があって $a = 2a_1$.
+このとき
+\begin{align*}
+  8a_1^3 &= 2c_1^2 \\
+  4a_1^3 &= c_1^2.
+\end{align*}
+
+同様に$c_1$は偶数なので, 自然数$c_2$があって $c_1 = 2c_2$.
+このとき
+\begin{align*}
+4a_1^3 &= 4c_2^2. \\
+a_1^3 &= c_2^2.
+\end{align*}
+よって ある自然数$n$があって $a_1 = n^2, c_2 = n^3$.
+したがって
+\begin{align*}
+a &= 2a_1 = 2n^2, \\
+c &= 2c_1 = 4c_2 = 4n^3.
+\end{align*}
+以上によって, $(a, b, c) = (2n^2, 2n^2, 4n^3)$($n$は自然数).
+% }}}
+
+\noindent (e)
+$x = 1$ とし
+\[
+  1 + y^3 = 1^3 + y^3 > 10^4
+\]
+とすれば $y^3 > 10^4$ であるが, これをみたす自然数$y$は$y \ge 22$を満たす \footnote{
+  $10^{4/3} = 21.544\ldots$のため}
+
+$y=22$ のとき: $z = 1^3 = 22^3 = 10649 = 23 \times 463$ であるから (c)の条件を満たす.
+  以上によって
+  \[
+  (a, b, c) = (23 \times 463, 22 \times 23 \times 463, 23^2 \times 463^2)
+  \]
+  は$a > 10^4$を満たす$(\ast)$の既約な解である.
+% }}}
 % }}}
 
 \end{document}
