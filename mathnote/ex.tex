@@ -888,6 +888,24 @@ $\set{p_1, p_2, \ldots}$を素数列とする.
       \cdots p_N^{e_N^\prime} \\
     &= mn.
 \end{align*} % }}}
+\item % {{{
+ユークリッドの互除法より
+\begin{align*}
+  307829 &= 301337 \times 1  + 6492 \\
+  301337 &= 6492   \times 46 + 2705 \\
+  6492   &= 2705   \times 2  + 1082 \\
+  2705   &= 1082   \times 2  + 541  \\
+  1082   &= 541    \times 2.
+\end{align*}
+したがって $\gcd(301337, 307829) = 541$ である.
+よって
+\begin{align*}
+\LCM(301337, 307829)
+  &= \frac{301337}{541} \times 307829 \\
+  &= 557 \times 307829 \\
+  &= 171460753.
+\end{align*}
+% }}}
 \end{enumerate} % }}}
 \end{enumerate} % }}}
 % }}}
