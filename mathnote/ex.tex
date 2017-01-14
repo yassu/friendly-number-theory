@@ -866,8 +866,28 @@ $2 \log_2(b) \le 7(\log_{10}(b) + 1)$ を示したい.
       &= 414.
   \end{align*}
 \end{enumerate} % }}}
-\item
+\item % {{{
 $mn = \gcd(m, n) \cdot \LCM(m, n)$.
+% }}}
+\item % {{{
+$\set{p_1, p_2, \ldots}$を素数列とする.
+十分大きな自然数$N$及び非負整数列$\set{e_j}_{j=1}^N$, $\set{e_j^\prime}_{j=1}^N$
+を用いて
+\begin{align*}
+  m &= p_1^{e_1} p_2^{e_2} \cdots p_N^{e_N}, \\
+  n &= p_1^{e_1^\prime} p_2^{e_2^\prime} \cdots p_N^{e_N^{\prime}}
+\end{align*}
+と表す.
+このとき
+\begin{align*}
+  \gcd(m, n) \cdot \LCM(m, n)
+    &= p_1^{\min(e_1, e_1^\prime)} p_2^{\min(e_2, e_2^\prime)} \cdots p_N^{\min(e_N, e_N^\prime)} \\
+    & \quad \times p_1^{\max(e_1, e_1^\prime)} p_2^{\max(e_2, e_2^\prime)} \cdots
+          p_N^{\max(e_N, e_N^\prime)} \\
+    &= p_1^{e_1} p_2^{e_2} \cdots p_N^{e_N} \times p_1^{e_1^\prime}p_2^{e_2^\prime}
+      \cdots p_N^{e_N^\prime} \\
+    &= mn.
+\end{align*} % }}}
 \end{enumerate} % }}}
 \end{enumerate} % }}}
 % }}}
