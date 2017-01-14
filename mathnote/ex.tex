@@ -1,6 +1,10 @@
 \documentclass{jarticle}
 \newcommand{\ccheckmark}{\checkmark \checkmark}
 \newcommand{\cnt}[1]{\noindent \underline{\textbf{#1}}}
+% LCM
+\makeatletter
+\def\LCM{\mathop{\operator@font LCM}}
+\makeatother
 \usepackage{longtable}
 \usepackage{enumerate}
 \usepackage{listing, jlisting}
@@ -771,7 +775,7 @@ $y=22$ のとき: $z = 1^3 = 22^3 = 10649 = 23 \times 463$ であるから (c)�
 % }}}
 
 \section{第5章の回答例} % {{{
-\begin{enumerate}[\cnt{5.1}] % {{{
+\begin{enumerate}[5.1] % {{{
 \item
 \begin{enumerate}[(a)] % {{{
   \item ユークリッドの互除法を用いると
@@ -836,6 +840,16 @@ $2 \log_2(b) \le 7(\log_{10}(b) + 1)$ を示したい.
 したがって, 命題が示された.
 % }}}
 \item TODO
+\item
+\begin{enumerate}[(a)] % {{{
+\item
+\begin{enumerate}[(i)] % {{{
+\item $8 = 2^3, 12 = 2^2 \cdot 3$ より
+  \[
+    \LCM(8, 12) = 2^3 \cdot 3 = 24.
+  \]
+\end{enumerate} % }}}
+\end{enumerate} % }}}
 \end{enumerate} % }}}
 % }}}
 
