@@ -1,0 +1,135 @@
+\section{第5章の回答例} % {{{
+\begin{enumerate}[5.1] % {{{
+\item
+\begin{enumerate}[(a)] % {{{
+  \item ユークリッドの互除法を用いると
+    \begin{align*}
+      67890 &= 12345 \times 5 + 6165 \\
+      12345 &= 6165 \times 2 + 15 \\
+      6165  &= 15 \times 411 + 0
+    \end{align*}
+    であるから, $\gcd(12345, 67890) = 15$である.
+  \item ユークリッドの互除法を用いると
+    \begin{align*}
+      54321 &= 9876 \times 5   + 4941 \\
+      9876  &= 4941 \times 1   + 4935 \\
+      4941  &= 4935 \times 1   + 6    \\
+      4935  &= 6    \times 822 + 3    \\
+    \end{align*}
+    であるから, $\gcd(54321, 9876) = 3$.
+\end{enumerate} % }}}
+\item % {{{
+考えているステップは
+\begin{align*}
+  r_j     &= q_{j+2}r_{j+1} + r_{j+2} \\
+  r_{j+1} &= q_{j+3}r_{j+2} + r_{j+3}
+\end{align*}
+である.
+$q_{j+2} \ge 2$ のときは
+\begin{align*}
+  r_j
+    &= q_{j+2}r_{j+1} + r_{j+2} \\
+    &\ge 2r_{j+1} + r_{j+2} > 2r_{j+1}
+\end{align*}
+より $r_{j+1} < \frac{1}{2} r_j$ が成り立つ.
+したがって $q_{j+2} = 1$ としてよい.
+同様に$q_{j+3} = 1$ としてよい.
+このとき, 考えているステップは
+\begin{align*}
+  r_j &= r_{j+1} + r_{j+2} \\
+  r_{j+1} &= r_{j+2} + r_{j+3}
+\end{align*}
+2式を足すと
+\begin{align*}
+  r_{j} + r_{j+1} &= r_{j+1} + 2r_{j+2} + r_{j+3} \\
+  r_j &= 2r_{j+2} + r_{j+3} > 2r_{j+2}.
+\end{align*}
+以上によって
+\[
+  r_{j+2} < \frac{1}{2} r_j.
+\]
+
+$2 \log_2(b) \le 7(\log_{10}(b) + 1)$ を示したい.
+\begin{align*}
+  & 2\log_{2}(b) \le 7(\log_{10}(b) + 1) \\
+  \same & 2\log_2(b) \le 7\log_{10}2 \cdot \log_2(b) + 7 \\
+  \same & \log_2(b) \cdot (2 - 7\log_{10}(2)) \le 7
+\end{align*}
+である.
+ここで
+\[
+  10^2 < 2^7
+\]
+より $2 < \log_{10}2^7 = 7\log_{10} 2$ であるから, $2 - 7\log_{10} 2 < 0$ である.
+したがって, 命題が示された.
+% }}}
+\item TODO
+\item
+\begin{enumerate}[(a)] % {{{
+\item
+\begin{enumerate}[(i)] % {{{
+\item $8 = 2^3, 12 = 2^2 \cdot 3$ より
+  \[
+    \LCM(8, 12) = 2^3 \cdot 3 = 24.
+  \]
+\item $20 = 2^2 \cdot 5, 30 = 2 \cdot 3 \cdot 5$ であるから
+  \[
+    \LCM(20, 30) = 2^2 \cdot 3 \cdot 5 = 20 \cdot 3 = 60.
+  \]
+\item $51 = 3 \cdot 17, 68 = 2^2 \cdot 17$ より
+  \begin{align*}
+    \LCM(51, 68)
+      = 2^2 \cdot 3 \cdot 17 &= 4 \cdot 51 \\
+                             &= 204
+  \end{align*}
+\item $18 = 3^2 \cdot 2$ より
+  \begin{align*}
+    \LCM(23, 18)
+      &= 23 \cdot 2 \cdot 3^2 \\
+      &= 46 \cdot 9 \\
+      &= 414.
+  \end{align*}
+\end{enumerate} % }}}
+\item % {{{
+$mn = \gcd(m, n) \cdot \LCM(m, n)$.
+% }}}
+\item % {{{
+$\set{p_1, p_2, \ldots}$を素数列とする.
+十分大きな自然数$N$及び非負整数列$\set{e_j}_{j=1}^N$, $\set{e_j^\prime}_{j=1}^N$
+を用いて
+\begin{align*}
+  m &= p_1^{e_1} p_2^{e_2} \cdots p_N^{e_N}, \\
+  n &= p_1^{e_1^\prime} p_2^{e_2^\prime} \cdots p_N^{e_N^{\prime}}
+\end{align*}
+と表す.
+このとき
+\begin{align*}
+  \gcd(m, n) \cdot \LCM(m, n)
+    &= p_1^{\min(e_1, e_1^\prime)} p_2^{\min(e_2, e_2^\prime)} \cdots p_N^{\min(e_N, e_N^\prime)} \\
+    & \quad \times p_1^{\max(e_1, e_1^\prime)} p_2^{\max(e_2, e_2^\prime)} \cdots
+          p_N^{\max(e_N, e_N^\prime)} \\
+    &= p_1^{e_1} p_2^{e_2} \cdots p_N^{e_N} \times p_1^{e_1^\prime}p_2^{e_2^\prime}
+      \cdots p_N^{e_N^\prime} \\
+    &= mn.
+\end{align*} % }}}
+\item % {{{
+ユークリッドの互除法より
+\begin{align*}
+  307829 &= 301337 \times 1  + 6492 \\
+  301337 &= 6492   \times 46 + 2705 \\
+  6492   &= 2705   \times 2  + 1082 \\
+  2705   &= 1082   \times 2  + 541  \\
+  1082   &= 541    \times 2.
+\end{align*}
+したがって $\gcd(301337, 307829) = 541$ である.
+よって
+\begin{align*}
+\LCM(301337, 307829)
+  &= \frac{301337}{541} \times 307829 \\
+  &= 557 \times 307829 \\
+  &= 171460753.
+\end{align*}
+% }}}
+\end{enumerate} % }}}
+\end{enumerate} % }}}
+% }}}
