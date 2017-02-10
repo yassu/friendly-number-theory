@@ -5,7 +5,7 @@ import subprocess
 from fabric.api import local, task
 
 AUTHOR = 'yassu'
-MAIN_BASENAME = 'ex'
+MAIN_BASENAME = 'main'
 LATEX = 'platex'
 DVIP = 'dvipdfmx'
 VIEW_PDF = 'evince'
