@@ -227,3 +227,5 @@ Cargo.lock
 
 # fabfile.pyc in mathnote
 mathnote/fabfile.pyc
+mathnote/.python-version
+
