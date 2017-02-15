@@ -80,51 +80,73 @@
   \]
   である.
   \end{enumerate}
-  \item ユークリッドの互除法より
-  \begin{align}
-    121 &= 105 \times 1 + 16 \tag{1} \\
-    105 &=  16 \times 6 + 9  \tag{2} \\
-    16  &=   9 \times 1 + 7  \tag{3} \\
-    9   &=   7 \times 1 + 2  \tag{4} \\
-    7   &=   2 \times 3 + 1  \tag{5} \\
-    2   &=   1 \times 2      \tag{6}
-  \end{align}
-  であるから, $\gcd(121, 105) = 1$ である.
+  \item
+  \begin{enumerate}[(a)]
+    \item
+    ユークリッドの互除法より
+    \begin{align}
+      121 &= 105 \times 1 + 16 \tag{1} \\
+      105 &=  16 \times 6 + 9  \tag{2} \\
+      16  &=   9 \times 1 + 7  \tag{3} \\
+      9   &=   7 \times 1 + 2  \tag{4} \\
+      7   &=   2 \times 3 + 1  \tag{5} \\
+      2   &=   1 \times 2      \tag{6}
+    \end{align}
+    であるから, $\gcd(121, 105) = 1$ である.
 
-  $b = 121, a = 105$ とおくと (1)より
-  \begin{align*}
-    b  & = a + 16 \\
-    16 & = b - a.
-  \end{align*}
-  (2)より
-  \begin{align*}
-    a &= (b - a) \times 6 + 9 \\
-    9 &= 7a - 6b.
-  \end{align*}
-  (3)より
-  \begin{align*}
-    b - a &= 7a - 6b + 7 \\
-    7 &= -8a + 7b.
-  \end{align*}
-  (4)より
-  \begin{align*}
-    7a - 6b &= -8a + 7b + 2 \\
-    2 &= 15a - 13b.
-  \end{align*}
-  (5)より
-  \begin{align*}
-    -8a + 7b &= (15a - 13b) \times 3 + 1 \\
-    -53a + 46b &= 1.
-  \end{align*}
-  よって, $(x, y) = (-53, 46)$は一つの方程式の解である.
+    $b = 121, a = 105$ とおくと (1)より
+    \begin{align*}
+      b  & = a + 16 \\
+      16 & = b - a.
+    \end{align*}
+    (2)より
+    \begin{align*}
+      a &= (b - a) \times 6 + 9 \\
+      9 &= 7a - 6b.
+    \end{align*}
+    (3)より
+    \begin{align*}
+      b - a &= 7a - 6b + 7 \\
+      7 &= -8a + 7b.
+    \end{align*}
+    (4)より
+    \begin{align*}
+      7a - 6b &= -8a + 7b + 2 \\
+      2 &= 15a - 13b.
+    \end{align*}
+    (5)より
+    \begin{align*}
+      -8a + 7b &= (15a - 13b) \times 3 + 1 \\
+      -53a + 46b &= 1.
+    \end{align*}
+    よって, $(x, y) = (-53, 46)$は一つの方程式の解である.
 
-  また,$g = \gcd(105, 121) = 1$であるから, 一般解は
-  \[
-    x = -53 + 121k, \quad
-    y = 46 - 105 \quad
-    (k \in \ZZ)
-  \]
-  である.
+    また,$g = \gcd(105, 121) = 1$であるから, 一般解は
+    \[
+      x = -53 + 121k, \quad
+      y = 46 - 105 \quad
+      (k \in \ZZ)
+    \]
+    である.
+  \item
+    Ex 6.1.aと同じ方程式である.
+    一般解は
+    \begin{align*}
+      (x, y)
+        &= (11, -2) + \frac{k}{15} (67890, -12345) \\
+        &= (11, -2) + k(4526, -823)
+    \end{align*}
+    である.
+  \item
+    Ex6.1.bと同じ方程式である.
+    一般解は
+    \begin{align*}
+      (x, y)
+        &= (-1645, 9048) + \frac{k}{3}(9876, -54321) \\
+        &= (-1645, 9048) + k(3292, -18107)
+    \end{align*}
+    である.
+  \end{enumerate}
 \end{enumerate} % }}}
 % }}}
 
