@@ -1,3 +1,4 @@
+import os
 from invoke import task
 
 MAIN_BASENAME = 'main'
@@ -36,4 +37,5 @@ def get_junk_filenames():
 def clean(ctx):
     """ コンパイル時にできたファイルを削除する """
     for filename in get_junk_filenames():
-        ctx.run('rm {}'.format(filename))
+        if os.path.exists(filename):
+            ctx.run(command)
