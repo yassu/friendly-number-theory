@@ -1,6 +1,5 @@
 from invoke import task
 
-AUTHOR = 'yassu'
 MAIN_BASENAME = 'main'
 LATEX = 'platex'
 DVIP = 'dvipdfmx'
@@ -26,7 +25,7 @@ def view(ctx):
     ctx.run('{} {}'.format(VIEW_PDF, MAIN_BASENAME + '.pdf'))
 
 
-def get_junk_files():
+def get_junk_filenames():
     yield 'x.log'
     for filename in (MAIN_BASENAME + ext for ext in (
             '.aux', '.dvi', '.log', '.pdf')):
@@ -36,5 +35,5 @@ def get_junk_files():
 @task
 def clean(ctx):
     """ コンパイル時にできたファイルを削除する """
-    for filename in get_junk_files:
+    for filename in get_junk_filenames():
         ctx.run('rm {}'.format(filename))
