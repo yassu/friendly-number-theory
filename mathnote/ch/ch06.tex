@@ -147,6 +147,41 @@
     \end{align*}
     である.
   \end{enumerate}
+\item
+  \begin{enumerate}[(a)] \item
+    Step 1) $\gcd(6, 15) = 3$ であるから, $6x + 15y$ は$3$の倍数全体を動く.
+    よって, $6x + 15y = 3t$ とおき, まず
+    \begin{align}
+      3t + 20z = 1 \tag{$\ast$}
+    \end{align}
+    の解 $(t, z)$ を探す.
+    ユークリッドの互除法より
+    \begin{align}
+      20 &= 3 \times 6 + 2 \tag{1} \\
+      3 &= 2 \times 1 + 1 \tag{2} \\
+      2 &= 1 \times 2. \tag{3}
+    \end{align}
+    $a = 3, b = 20$ とおくと (1)より
+    \begin{align*}
+      b &= 6a + 2 \\
+      2 &= b - 6a.
+    \end{align*}
+    (2)より
+    \begin{align*}
+    a &= b - 6a + 1 \\
+    7a - b &= 1.
+    \end{align*}
+    よって, $(t, z) = (7, -1)$ は $(\ast)$の解の一つである.
+
+  Step 2)
+    次に $6x + 15y = 3 \cdot 7 = 21$ すなわち
+    \[
+      2x + 5y = 7
+    \]
+    は $(x, y) = (1, 1)$ を解の一つとして持つ.
+
+    以上によって, $(x, y, z) = (1, 1, -1)$ が解の一つである.
+  \end{enumerate}
 \end{enumerate} % }}}
 % }}}
 
